@@ -31,6 +31,11 @@
 ------------------------------------
 ### Fin de instalación básica
 ------------------------------------
+
+------------------------------------
+### Desarrollo
+------------------------------------
+
 #### Creación de modelos - ORM
 - Una vez creados los modelos en models.py configurar settings.py en la sección de installed_apps para mandar a llamar la app polls, una vez hechos los cambios ejecutar:
     - python3 manage.py makemigrations polls --> Para crear los documentos de las conexiones.
@@ -41,6 +46,17 @@
 - python3 manage.py shell --> Corre la terminal de django
 - from polls.models import Choice, Question --> Para importar los modelos desde la terminal interactiva. (no debe arrojar nada)
 - from django.utils import timezone --> Para crear objetos datetime y trabajar con ellos desde consola.
+
+#### Administrador Django
+- python3 manage.py createsuperuser --> Crea usuario y contraseña para el administrador.
+    - Advertencia: Guardar bien los datos de administrador.
+
+------------------------------------
+### Fin - Desarrollo
+------------------------------------
+------------------------------------
+### Bases de Datos
+------------------------------------
 
 INSERT de datos a través de la terminal interactiva de django:
 
@@ -66,7 +82,12 @@ Querys con variables.
     - q.choice_set.count() --> Muestra el conteo en número de las respuestas existentes dentro de q
     - Choice.objects.filter(question__pub_date__year=timezone.now().year) --> Muestra el resultado de todas las respuestas que cumplan con la condición, en este caso un listado de las respuestas publicadas este año.
 
-#### Notas
+------------------------------------
+### Fin - Bases de Datos
+------------------------------------
+------------------------------------
+### Notas Extra
+------------------------------------
 - manage.py --> Inicia los procesos de conexión de django con la app
 - wsgi.py - asgi.py --> conjunto de archivos que son para el deploy de la app
 - Los proyectos de django son un conjunto de aplicaciones.
@@ -76,3 +97,6 @@ Querys con variables.
         - Las clases podrían traducirse a tabla, y los atributos a cada columna de la tabla en la bd. (clase usuario -> atributos id, nombre, password)
 - Models.py --> Se podría decir que este archivo es nuestra base de datos en python.
 - QuerySet[] --> Es un conjunto de datos de la base de datos.
+------------------------------------
+### Fin - Notas Extra
+------------------------------------
