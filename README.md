@@ -40,13 +40,31 @@
 #### Consola interactiva de Django
 - python3 manage.py shell --> Corre la terminal de django
 - from polls.models import Choice, Question --> Para importar los modelos desde la terminal interactiva. (no debe arrojar nada)
-- Question.objects.all() --> Muestra los objetos de la clase.
-- from django.utils import timezone --> Para crear objetos datetime.
-- q = Question(question_text="¿Quíen es el mejor programador de python?", pub_date=timezone.now()) --> En la variable q dentro de consola almacenamos la respuesta de una pregunta.
-- q.save() --> Método que guarda lo que está en la variable q que en este caso se guardaría en la tabla questions de la DB
-- q --> Te dice que contiene la variable q
-- q.question_text --> Muestra el texto de la pregunta. ver más opciones en models.py
+- from django.utils import timezone --> Para crear objetos datetime y trabajar con ellos desde consola.
 
+INSERT de datos a través de la terminal interactiva de django:
+
+- Question(question_text="¿Quién es el mejor profesor del IMC?", pub_date=timezone.now()).save() --> Ingresa el question_text en el objeto Question.
+    - Para resolverlo con variables:
+        - q = Question(question_text="¿Quíen es el mejor programador de python?", pub_date=timezone.now()) --> En la variable q dentro de consola almacenamos la respuesta de una pregunta.
+        - q.save() --> Método que guarda lo que está en la variable q que en este caso se guardaría en la tabla questions de la DB
+        - q --> Te dice que contiene la variable q
+        - q.question_text --> Muestra el texto de la pregunta. ver más opciones en models.py
+
+Querys de la base de datos.
+
+- Todas las consultas se pueden almacenar en variables.
+- Question.objects.all() --> Muestra todos los objetos de la clase.
+- Question.objects.get(pk=1) --> Muestra la condición seleccionada, en este caso la PrimaryKey 1
+- Question.objects.filter(question_text__startswith="¿Quién") --> Muestra un listado a través de la condición seleccionada, en este caso todas las question_text que inicien con "¿Quién"
+
+Querys con variables.
+
+- Considerando que "q" es una variable con una consulta guardada --> q = Question.objects.get(pk=3)
+    - q.choice_set.create(choice_text="Guillermo Cacho", votes=0) --> Guardaría en la pregunta pk=3 la opción Guillermo Cacho como una choice_text
+    - q.choice_set.all() --> Muestra el contenido de una llave foranea, para este ejemplo mostraría las respuestas de la pregunta con la primarykey=3
+    - q.choice_set.count() --> Muestra el conteo en número de las respuestas existentes dentro de q
+    - Choice.objects.filter(question__pub_date__year=timezone.now().year) --> Muestra el resultado de todas las respuestas que cumplan con la condición, en este caso un listado de las respuestas publicadas este año.
 
 #### Notas
 - manage.py --> Inicia los procesos de conexión de django con la app
