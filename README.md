@@ -97,6 +97,13 @@ Querys con variables.
         - Las clases podrían traducirse a tabla, y los atributos a cada columna de la tabla en la bd. (clase usuario -> atributos id, nombre, password)
 - Models.py --> Se podría decir que este archivo es nuestra base de datos en python.
 - QuerySet[] --> Es un conjunto de datos de la base de datos.
+- MTV --> Model Template View 
+- Django Web App --> Permite trabajar el back-end y el front-end.
+    - Front-End --> Templates
+    - Back-End --> Views: Está conformada por funciones y clases.
+        - Función --> Function Based Views
+        - Clase --> Generic Views
+    - Ejemplos View --> En una app como twitter cada una de las siguientes serían vistas diferentes: Home, Tweet, Setting, Messages.
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
