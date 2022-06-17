@@ -117,6 +117,8 @@ Querys con variables.
         - Función --> Function Based Views
         - Clase --> Generic Views
     - Ejemplos View --> En una app como twitter cada una de las siguientes serían vistas diferentes: Home, Tweet, Setting, Messages.
+- {% csrf_token %} --> Es para darle seguridad al formulario (ver detail.html)
+- forloop.counter --> Es una opción de django para crear un contador que incremente con cada vuelta (ver detail.html)
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
