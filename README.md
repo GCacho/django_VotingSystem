@@ -119,6 +119,15 @@ Querys con variables.
     - Ejemplos View --> En una app como twitter cada una de las siguientes serían vistas diferentes: Home, Tweet, Setting, Messages.
 - {% csrf_token %} --> Es para darle seguridad al formulario (ver detail.html)
 - forloop.counter --> Es una opción de django para crear un contador que incremente con cada vuelta (ver detail.html)
+- Generic View
+    - List View --> Para poder traer varios elementos de la base de datos, renderizar y mostrar
+    - Login View --> Para crear logins
+    - Logout View --> Para hacer logouts
+    - Create View --> Para crear vistas
+    - Update View --> Para modificar un perfil de usuario por ejemplo
+    - Form View --> Para crear por ejemplo un hilo en twitter
+    - Delete View --> Para borrar un tweet por ejemplo.
+    - http://ccbv.co.uk/
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
