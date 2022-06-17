@@ -54,6 +54,8 @@
 #### Administrador Django
 - python3 manage.py createsuperuser --> Crea usuario y contraseña para el administrador.
     - Advertencia: Guardar bien los datos de administrador.
+- Para aprender más --> https://docs.djangoproject.com/en/4.0/ref/contrib/admin/
+
 
 ### Templates
 Tendremos que crear una carpeta llamada templates dentro de polls y dentro de esa carpeta (templates) tendremos que crear otra carteta llamada polls Ejemplo:
