@@ -139,6 +139,7 @@ Querys con variables.
     - http://ccbv.co.uk/
 - tests --> Son funciones que verifican que tu código opere correctamente.
     - TDD --> Test Driven Development
+    - Coverage --> Cumplir con todos los test necesarios para la app
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
