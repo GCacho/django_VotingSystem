@@ -32,6 +32,7 @@ class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 
+
     def get_queryset(self): # es para obtener las preguntas
         """Return the last five published questions"""
         return Question.objects.filter(pub_date__lte = timezone.now()).order_by("-pub_date")[:5] #order_by es igual a filter pero ordenado / El "-" antes de pub es para ordenar de la más reciente a la más vieja / [:5] es para mostrar solo 5
@@ -40,6 +41,12 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = "polls/detail.html"
+
+    def get_queryset(self):
+        """
+        Exclude any questions that aren't published yet
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
 class ResultView(generic.DetailView):
