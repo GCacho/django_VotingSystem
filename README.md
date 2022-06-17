@@ -55,7 +55,6 @@
 - python3 manage.py createsuperuser --> Crea usuario y contraseña para el administrador.
     - Advertencia: Guardar bien los datos de administrador.
 
-
 ### Templates
 Tendremos que crear una carpeta llamada templates dentro de polls y dentro de esa carpeta (templates) tendremos que crear otra carteta llamada polls Ejemplo:
 - django-introductionapp
@@ -63,6 +62,10 @@ Tendremos que crear una carpeta llamada templates dentro de polls y dentro de es
         - polls
             - templates
                 - polls
+
+### Tests
+Despues de programar los test, necesitaremos correrlos.
+- python3 manage.py test polls
 
 ------------------------------------
 ### Fin - Desarrollo
@@ -128,6 +131,8 @@ Querys con variables.
     - Form View --> Para crear por ejemplo un hilo en twitter
     - Delete View --> Para borrar un tweet por ejemplo.
     - http://ccbv.co.uk/
+- tests --> Son funciones que verifican que tu código opere correctamente.
+    - TDD --> Test Driven Development
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
