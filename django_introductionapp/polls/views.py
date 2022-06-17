@@ -1,10 +1,14 @@
-from email.policy import HTTP
 from django.shortcuts import render
 from django.http import HttpResponse #permite ejecutar respuesta HTTP
 
+from .models import Question
+
 # Create your views here.
 def index(request): #Este request viene el import HttpResponse
-    return HttpResponse("Página principal de Votaciones") #Se manda a urls.py
+    latest_question_list = Question.objects.all()
+    return render(request, "polls/index.html", {
+        "latest_question_list": latest_question_list # Para que hacer disponible esta variable en el template
+    }) #render lleva 3 parametros 1-request, 2-template, 3-contexto
 
 
 def detail(request, question_id):

@@ -14,6 +14,10 @@
     - source venv/bin/activate
 - Instala los requerimientos de la app.
     - pip install -r requirements.txt
+- Se recomienda tambien tener insataladas las extenciones de python y django en VScode
+    -   "emmet.includeLanguages": {
+            "html": "django-html"
+        } --> en el archivo settings.json de VScode para incluir html a la extención django.
 
 #### Corre el framework Django:
 
@@ -50,6 +54,15 @@
 #### Administrador Django
 - python3 manage.py createsuperuser --> Crea usuario y contraseña para el administrador.
     - Advertencia: Guardar bien los datos de administrador.
+
+
+### Templates
+Tendremos que crear una carpeta llamada templates dentro de polls y dentro de esa carpeta (templates) tendremos que crear otra carteta llamada polls Ejemplo:
+- django-introductionapp
+    - django-introductionapp
+        - polls
+            - templates
+                - polls
 
 ------------------------------------
 ### Fin - Desarrollo
