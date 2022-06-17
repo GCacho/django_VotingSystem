@@ -66,6 +66,12 @@ Tendremos que crear una carpeta llamada templates dentro de polls y dentro de es
 ### Tests
 Despues de programar los test, necesitaremos correrlos.
 - python3 manage.py test polls
+- Pasos a seguir para los test
+    - Identificar el problema
+    - Crear el test
+    - Correr el test
+    - Arreglar el problema
+    - Correr el test nuevamente para ver si se resolvió.
 
 ------------------------------------
 ### Fin - Desarrollo

@@ -15,7 +15,7 @@ class Question(models.Model): #crea el modelo con el import models
 
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1) #Le resta al tiempo actual un día. necesita imports de date y datetime / Si la pregunta es más reciente a 1 día entonces True
+        return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(days=1) #Le resta al tiempo actual un día. necesita imports de date y datetime / Si la pregunta es más reciente a 1 día entonces True
 
 
 class Choice(models.Model):
