@@ -140,9 +140,18 @@ Querys con variables.
 - tests --> Son funciones que verifican que tu código opere correctamente.
     - TDD --> Test Driven Development
     - Coverage --> Cumplir con todos los test necesarios para la app
+    - Consejos extra:
+        - Más tests es mejor, aunque parezca lo contrario
+        - Crear una clase para cada modelo o vista testeada
+        - Establece nombres de métodos de test los más descripticos posibles
 ------------------------------------
 ### Fin - Notas Extra
 ------------------------------------
+### Retos extra
+- Tests
+    - Crear los tests para Results View
+    - Asegurarse de que no se pueden crear Questions sin Choices
+    - Crear los tests respectivos
 ------------------------------------
 ### END
 ------------------------------------
