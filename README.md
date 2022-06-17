@@ -73,6 +73,9 @@ Despues de programar los test, necesitaremos correrlos.
     - Arreglar el problema
     - Correr el test nuevamente para ver si se resolvió.
 
+### Archivos estáticos - HTML CSS JavaScript 
+Crear la carpeta static dentro de tu carpeta de app, en este caso dentro de polls
+
 ------------------------------------
 ### Fin - Desarrollo
 ------------------------------------
