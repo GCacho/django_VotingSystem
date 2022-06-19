@@ -28,7 +28,7 @@
 ##### Dentro de la carpeta secundaria ingresa lo siguiente:
 * ls -> Deberías poder visualizar otra carpeta llamada igual a la actual y el archivo manage.py
 * Corre el servidor.
-    * python3 manage.py runserver
+    * python3 manage.py runserver --> (Se necesita hacer primero las migrations)
 
 #### Crear carpeta para la aplicación
 * python3 manage.py startapp polls --> crea la carpeta polls para trabajar en la app y el archivo db.sqlite3
